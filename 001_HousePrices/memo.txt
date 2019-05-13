@@ -10,3 +10,48 @@ https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview/de
 感じを見るに常設のPythonトレーニングっぽかったので、解説記事を見ながら実装する。
 
 ### 参考にする記事
+https://www.kaggle.com/katotaka/prediction-house-prices-eda
+https://yolo-kiyoshi.com/2018/12/17/post-1003/
+https://sonaeru-blog.com/kaggle-4/
+
+
+## データの読み込み
+まずは与えられているデータを確認する。
+Kaggleの問題ページから`Data`タブに飛べば、提供されるデータ一覧を確認できる。
+今回提供されるデータは以下のようになっている。
+- train.csv - トレーニング用データセット
+- test.csv - テスト用データセット
+- data_description.txt - 提供されるデータカラムの説明テキスト。
+- sample_submission.csv - 提出する形式のサンプルデータ。
+
+まずはこのデータを受け取る。
+Kaggleのkernelを用いて、住宅価格の予測モデルを作成する。
+
+新規にkernelを作成して、今回使うデータセットを受け取る。
+kernel上部の`+ Add Dataset` から`Conpetition Data`を選択。
+使いたいデータセットを検索して、`Add`すればOK.
+
+```python
+# No.1
+# ライブラリのインポート
+import pandas as pd
+import pandas_profiling
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+# Jupyter Notebookの中でインライン表示する場合の設定（これが無いと別ウィンドウでグラフが開く）
+%matplotlib inline
+
+# データの読み込み
+train = pd.read_csv("../input/train.csv")
+test = pd.read_csv("../input/test.csv")
+```
+
+ちゃんとデータが受け取れているかを確認する。
+```python
+print(train)
+print(test)
+```
+
