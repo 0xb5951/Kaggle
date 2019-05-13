@@ -1,0 +1,12 @@
+## kaggleのリンク
+https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview/description
+
+## 問題の概要
+回帰問題のチュートリアル。
+与えられた79の変数（敷地面積とか天井の高さとか）をもとに住宅価格を予測する。
+
+## 方針
+まだKaggleに慣れていないので、トレーニング的にこのコンペに参加する。
+感じを見るに常設のPythonトレーニングっぽかったので、解説記事を見ながら実装する。
+
+### 参考にする記事
